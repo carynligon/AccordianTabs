@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   margin-top: 5rem;
 }
@@ -5,8 +7,7 @@ ul {
   width: 15rem;
   list-style-type: none;
   margin: 0 auto;
-  background: #444445;
-  padding: 0 2px;
+  padding: 0;
   font-size: 0.8rem;
   line-height: 2rem;
   font-weight: bolder;
@@ -21,10 +22,10 @@ ul {
 }
 
 .first {
-  background: #525459;
+  background: $gray-background;
   color: #fff;
   padding: 2px;
-  &:hover, &:active {
+  &:hover {
     background: linear-gradient(to bottom, rgba(124, 161, 41, 1)20%, rgba(124, 161, 41, 0.7));
     color: #3e5706;
     .counter {
@@ -34,13 +35,23 @@ ul {
   }
 }
 
+.active {
+  background: linear-gradient(to bottom, rgba(124, 161, 41, 1)20%, rgba(124, 161, 41, 0.7));
+  color: #3e5706;
+  .counter {
+    background: $green;
+    color: #fff;
+  }
+}
+
+
 i {
   margin: 0 3%;
 }
 
 .counter {
   float: right;
-  background: #404247;
+  background: $gray-counter;
   line-height: 0.8rem;
   line-height: 0.5rem;
   margin: 5px 3%;
@@ -50,7 +61,7 @@ i {
 
 .dropdown {
   background: #e5e5e5;
-  color: #76787e;
+  color: $gray-text;
   line-height: 1.7rem;
   .number {
     font-size: 0.5rem;
